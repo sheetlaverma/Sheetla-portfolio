@@ -17,6 +17,18 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Sheetla Verma | Portfolio",
   description: "Portfolio of Sheetla Verma - developer and designer.",
+  metadataBase: new URL("https://sheetla-portfolio.vercel.app"),
+  openGraph: {
+    title: "Sheetla Verma | Portfolio",
+    description: "Frontend + backend portfolio built with Next.js and deployed on Vercel.",
+    type: "website",
+    url: "https://sheetla-portfolio.vercel.app",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sheetla Verma | Portfolio",
+    description: "Frontend + backend portfolio built with Next.js and deployed on Vercel.",
+  },
 };
 
 export default function RootLayout({
