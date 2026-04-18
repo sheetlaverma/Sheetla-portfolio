@@ -1,5 +1,6 @@
 import SectionTitle from "@/components/SectionTitle";
 import ContactForm from "@/components/ContactForm";
+import Footer from "@/components/Footer";
 import { profile, projects, skills } from "@/lib/portfolio-data";
 
 export default function Home() {
@@ -108,6 +109,7 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 }
