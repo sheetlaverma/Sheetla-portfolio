@@ -69,9 +69,27 @@ export default function ContactForm() {
 
   return (
     <form className="contact-form" onSubmit={handleSubmit} noValidate>
-      <input name="name" placeholder="Your name" required minLength={2} />
-      <input name="email" type="email" placeholder="Your email" required />
-      <textarea name="message" placeholder="Your message" rows={4} required minLength={10} />
+      <label htmlFor="contact-name" className="sr-only">
+        Name
+      </label>
+      <input id="contact-name" name="name" placeholder="Your name" required minLength={2} />
+
+      <label htmlFor="contact-email" className="sr-only">
+        Email
+      </label>
+      <input id="contact-email" name="email" type="email" placeholder="Your email" required />
+
+      <label htmlFor="contact-message" className="sr-only">
+        Message
+      </label>
+      <textarea
+        id="contact-message"
+        name="message"
+        placeholder="Your message"
+        rows={4}
+        required
+        minLength={10}
+      />
       <button type="submit" disabled={submitting}>
         {submitting ? "Sending..." : "Send Message"}
       </button>
