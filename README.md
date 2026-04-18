@@ -1,6 +1,17 @@
 # Sheetla Portfolio (Next.js + Vercel)
 
-This is a full-stack portfolio for Sheetla Verma inspired by minimalist portfolio layouts.
+This is a data analyst portfolio for Sheetla Verma inspired by minimalist portfolio layouts.
+
+## Profile Snapshot
+
+- Name: Sheetla Verma
+- Role: Data Analyst - 1 Years Experience
+- Focus: Revenue analytics, customer behaviour, and ML-driven forecasting
+- Email: sheetlaverma71@gmail.com
+- LinkedIn: https://www.linkedin.com/in/sheetla-verma/
+- Instagram: https://www.instagram.com/atharv_a6/
+- GitHub: https://github.com/sheetlaverma
+- Repository: https://github.com/sheetlaverma/Sheetla-portfolio.git
 
 ## Stack
 

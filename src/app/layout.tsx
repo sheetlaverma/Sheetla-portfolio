@@ -16,18 +16,21 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: "Sheetla Verma | Portfolio",
-  description: "Portfolio of Sheetla Verma - developer and designer.",
+  description:
+    "Data Analyst portfolio of Sheetla Verma focused on revenue analytics, customer behaviour, and forecasting.",
   metadataBase: new URL("https://sheetla-portfolio.vercel.app"),
   openGraph: {
     title: "Sheetla Verma | Portfolio",
-    description: "Frontend + backend portfolio built with Next.js and deployed on Vercel.",
+    description:
+      "Data Analyst portfolio highlighting business impact across telecom, FMCG, e-commerce, and healthcare.",
     type: "website",
     url: "https://sheetla-portfolio.vercel.app",
   },
   twitter: {
     card: "summary_large_image",
     title: "Sheetla Verma | Portfolio",
-    description: "Frontend + backend portfolio built with Next.js and deployed on Vercel.",
+    description:
+      "Data Analyst portfolio highlighting business impact across telecom, FMCG, e-commerce, and healthcare.",
   },
 };
 
