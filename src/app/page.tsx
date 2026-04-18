@@ -2,7 +2,14 @@ import SectionTitle from "@/components/SectionTitle";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import RotatingWords from "@/components/RotatingWords";
-import { profile, projects, skills } from "@/lib/portfolio-data";
+import {
+  certifications,
+  metrics,
+  profile,
+  projects,
+  skillCategories,
+  skills,
+} from "@/lib/portfolio-data";
 
 export default function Home() {
   return (
@@ -12,6 +19,7 @@ export default function Home() {
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
         <a href="#contact">Contact</a>
       </nav>
 
@@ -23,6 +31,11 @@ export default function Home() {
             <span>{profile.role}</span>
           </h1>
           <p className="hero-tagline">{profile.tagline}</p>
+          <div className="hero-stack">
+            {skills.map((skill) => (
+              <span key={skill.name}>{skill.name}</span>
+            ))}
+          </div>
           <RotatingWords />
           <div className="hero-actions">
             <a href="#projects" className="btn btn-primary">
@@ -35,7 +48,7 @@ export default function Home() {
         </section>
 
         <section id="about" className="panel">
-          <SectionTitle label="01 / ABOUT" title="Creative Engineer With Product Mindset" />
+          <SectionTitle label="01 / ABOUT" title="Data Analyst Focused On Business Outcomes" />
           <div className="about-grid">
             <div>
               {profile.about.map((para) => (
@@ -43,41 +56,42 @@ export default function Home() {
               ))}
             </div>
             <ul className="mini-stats">
-              <li>
-                <strong>10+</strong>
-                <span>Projects</span>
-              </li>
-              <li>
-                <strong>2+</strong>
-                <span>Years Learning</span>
-              </li>
-              <li>
-                <strong>100%</strong>
-                <span>Dedication</span>
-              </li>
+              {metrics.map((metric) => (
+                <li key={metric.label}>
+                  <strong>{metric.value}</strong>
+                  <span>{metric.label}</span>
+                </li>
+              ))}
             </ul>
           </div>
         </section>
 
         <section id="skills" className="panel tint">
-          <SectionTitle label="02 / SKILLS" title="Tech Stack & Tools" />
-          <div className="skills-grid">
-            {skills.map((skill) => (
-              <div key={skill.name} className="skill-chip">
-                {skill.name}
-              </div>
+          <SectionTitle label="02 / SKILLS" title="Tools, Analytics, And Communication" />
+          <div className="skills-categories">
+            {skillCategories.map((group) => (
+              <article key={group.category} className="skill-category-card">
+                <h3>{group.category}</h3>
+                <ul>
+                  {group.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </article>
             ))}
           </div>
         </section>
 
         <section id="projects" className="panel">
-          <SectionTitle label="03 / PROJECTS" title="Selected Work" />
+          <SectionTitle label="03 / PROJECTS" title="Featured Projects" />
           <div className="projects-grid">
             {projects.map((project, index) => (
               <article key={project.title} className="project-card">
                 <span className="project-index">0{index + 1}</span>
                 <h3>{project.title}</h3>
-                <p>{project.category}</p>
+                <p className="project-impact-badge">{project.category}</p>
+                <p>{project.summary}</p>
+                <p className="project-impact-text">{project.impact}</p>
                 <div className="project-stack">
                   {project.stack.map((item) => (
                     <span key={item}>{item}</span>
@@ -96,16 +110,41 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="certifications" className="panel tint">
+          <SectionTitle label="04 / CERTIFICATIONS" title="Learning And Credentials" />
+          <div className="cert-grid">
+            {certifications.map((certification) => (
+              <article key={certification.title} className="cert-card">
+                <h3>{certification.title}</h3>
+                <p>{certification.issuer}</p>
+                <span>{certification.year}</span>
+              </article>
+            ))}
+          </div>
+        </section>
+
         <section id="contact" className="panel tint">
-          <SectionTitle label="04 / CONTACT" title="Let's Build Something Together" />
+          <SectionTitle label="05 / CONTACT" title="Let's Build Something Together" />
           <div className="contact-grid">
             <div>
               <p>
-                Open to internships, freelance opportunities, and collaborations.
+                Open to analyst roles, freelance analytics consulting, and cross-functional collaboration.
               </p>
-              <a href={profile.github} target="_blank" rel="noreferrer">
-                GitHub
-              </a>
+              <div className="contact-links">
+                <a href={profile.github} target="_blank" rel="noreferrer">
+                  GitHub
+                </a>
+                <a href={profile.linkedin} target="_blank" rel="noreferrer">
+                  LinkedIn
+                </a>
+                <a href={profile.instagram} target="_blank" rel="noreferrer">
+                  Instagram
+                </a>
+                <a href={profile.repository} target="_blank" rel="noreferrer">
+                  Repository
+                </a>
+                <a href={`mailto:${profile.email}`}>{profile.email}</a>
+              </div>
             </div>
             <ContactForm />
           </div>
