@@ -53,6 +53,11 @@ Copy `.env.example` to `.env.local` and configure values as needed:
 3. Add optional environment variables in Vercel Project Settings.
 4. Deploy.
 
+## Checklists
+
+- Deployment checklist: `DEPLOY_CHECKLIST.md`
+- QA checklist: `QA_CHECKLIST.md`
+
 ## Notes
 
 - Design is reference-inspired, not a direct copy.
