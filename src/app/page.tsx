@@ -1,4 +1,5 @@
 import SectionTitle from "@/components/SectionTitle";
+import ContactForm from "@/components/ContactForm";
 import { profile, projects, skills } from "@/lib/portfolio-data";
 
 export default function Home() {
@@ -103,12 +104,7 @@ export default function Home() {
                 GitHub
               </a>
             </div>
-            <form className="contact-form" action="/api/contact" method="post">
-              <input name="name" placeholder="Your name" required />
-              <input name="email" type="email" placeholder="Your email" required />
-              <textarea name="message" placeholder="Your message" rows={4} required />
-              <button type="submit">Send Message</button>
-            </form>
+            <ContactForm />
           </div>
         </section>
       </main>
