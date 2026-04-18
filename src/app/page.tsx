@@ -1,6 +1,7 @@
 import SectionTitle from "@/components/SectionTitle";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+import ProjectCard from "@/components/ProjectCard";
 import RotatingWords from "@/components/RotatingWords";
 import {
   certifications,
@@ -89,26 +90,7 @@ export default function Home() {
           <SectionTitle label="03 / PROJECTS" title="Featured Projects" />
           <div className="projects-grid">
             {projects.map((project, index) => (
-              <article key={project.title} className="project-card">
-                <span className="project-index">0{index + 1}</span>
-                <h3>{project.title}</h3>
-                <p className="project-impact-badge">{project.category}</p>
-                <p>{project.summary}</p>
-                <p className="project-impact-text">{project.impact}</p>
-                <div className="project-stack">
-                  {project.stack.map((item) => (
-                    <span key={item}>{item}</span>
-                  ))}
-                </div>
-                <div className="project-links">
-                  <a href={project.liveUrl} target="_blank" rel="noreferrer">
-                    Live
-                  </a>
-                  <a href={project.repoUrl} target="_blank" rel="noreferrer">
-                    Code
-                  </a>
-                </div>
-              </article>
+              <ProjectCard key={project.title} project={project} index={index} />
             ))}
           </div>
         </section>
