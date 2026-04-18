@@ -14,7 +14,10 @@ import {
 export default function Home() {
   return (
     <>
-      <nav className="top-nav">
+      <a className="skip-link" href="#main-content">
+        Skip to main content
+      </a>
+      <nav className="top-nav" aria-label="Primary navigation">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
@@ -23,7 +26,7 @@ export default function Home() {
         <a href="#contact">Contact</a>
       </nav>
 
-      <main>
+      <main id="main-content">
         <section className="hero" id="home">
           <p className="hero-kicker">HELLO THERE</p>
           <h1>
