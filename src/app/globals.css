@@ -6,6 +6,9 @@
   --accent-ink: #000000;
   --muted: #6f6f6f;
   --line: #d4d0c4;
+  --fs-display: clamp(2.4rem, 8vw, 5.4rem);
+  --fs-title: clamp(1.6rem, 3vw, 2.35rem);
+  --fs-body: clamp(0.97rem, 1.2vw, 1.03rem);
   color-scheme: light;
 }
 
@@ -25,6 +28,8 @@ body {
   font-family: var(--font-poppins), sans-serif;
   background: radial-gradient(circle at 95% 4%, #ffe7a8, transparent 28%), var(--bg);
   color: var(--ink);
+  font-size: var(--fs-body);
+  line-height: 1.7;
 }
 
 .skip-link {
@@ -101,8 +106,9 @@ main {
 
 .hero h1 {
   font-family: var(--font-playfair), serif;
-  font-size: clamp(2.2rem, 8vw, 5rem);
-  line-height: 0.98;
+  font-size: var(--fs-display);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
   margin: 0;
 }
 
@@ -111,8 +117,9 @@ main {
   color: var(--muted);
   font-family: var(--font-poppins), sans-serif;
   font-weight: 500;
-  font-size: clamp(1.1rem, 3.1vw, 1.8rem);
+  font-size: clamp(1.05rem, 2.8vw, 1.7rem);
   margin-top: 0.9rem;
+  letter-spacing: 0.01em;
 }
 
 .hero-tagline {
@@ -220,8 +227,10 @@ main {
 
 .section-head h2 {
   margin: 0;
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-size: var(--fs-title);
   font-family: var(--font-playfair), serif;
+  line-height: 1.18;
+  letter-spacing: -0.01em;
 }
 
 .about-grid {
@@ -319,6 +328,7 @@ main {
 
 .project-card h3 {
   margin: 0;
+  line-height: 1.25;
 }
 
 .project-card p {
