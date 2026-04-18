@@ -94,6 +94,20 @@ main {
   line-height: 1.8;
 }
 
+.hero-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.hero-stack span {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.8rem;
+  background: #fff;
+}
+
 .rotating-words {
   margin: 0;
   display: inline-block;
@@ -224,6 +238,30 @@ main {
   gap: 0.65rem;
 }
 
+.skills-categories {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.skill-category-card {
+  border: 1px solid var(--line);
+  background: var(--card);
+  padding: 1rem;
+}
+
+.skill-category-card h3 {
+  margin: 0 0 0.8rem;
+  font-size: 1rem;
+}
+
+.skill-category-card ul {
+  margin: 0;
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
 .skill-chip {
   text-align: center;
   border: 1px solid var(--ink);
@@ -262,6 +300,22 @@ main {
   color: var(--muted);
 }
 
+.project-impact-badge {
+  width: fit-content;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  padding: 0.18rem 0.55rem;
+  background: #fffbe9;
+  font-weight: 600;
+  color: var(--ink) !important;
+  font-size: 0.8rem;
+}
+
+.project-impact-text {
+  color: var(--ink) !important;
+  font-weight: 500;
+}
+
 .project-stack {
   display: flex;
   flex-wrap: wrap;
@@ -285,6 +339,34 @@ main {
   text-decoration-thickness: 1px;
 }
 
+.cert-grid {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.cert-card {
+  border: 1px solid var(--line);
+  background: var(--card);
+  padding: 1rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.cert-card h3,
+.cert-card p {
+  margin: 0;
+}
+
+.cert-card span {
+  display: inline-block;
+  width: fit-content;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.82rem;
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -299,6 +381,15 @@ main {
   display: inline-block;
   margin-top: 0.7rem;
   color: var(--ink);
+}
+
+.contact-links {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.contact-links a {
+  width: fit-content;
 }
 
 .contact-form {
@@ -368,6 +459,12 @@ main {
     grid-template-columns: 1fr;
   }
 
+  .skills-categories,
+  .projects-grid,
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+
   .panel {
     padding: 4rem 0;
   }
@@ -422,5 +519,4 @@ main {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}
 }

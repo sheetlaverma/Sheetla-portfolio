@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="site-footer">
       <p>
-        {new Date().getFullYear()} {profile.name}. Built with Next.js for Vercel.
+        {new Date().getFullYear()} {profile.name}. Data Analyst Portfolio.
       </p>
       <div>
         <a href={profile.github} target="_blank" rel="noreferrer">
@@ -12,6 +12,12 @@ export default function Footer() {
         </a>
         <a href={profile.linkedin} target="_blank" rel="noreferrer">
           LinkedIn
+        </a>
+        <a href={profile.instagram} target="_blank" rel="noreferrer">
+          Instagram
+        </a>
+        <a href={profile.repository} target="_blank" rel="noreferrer">
+          Repo
         </a>
         <a href={`mailto:${profile.email}`}>Email</a>
       </div>
