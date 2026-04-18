@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const words = ["DESIGN", "CODE", "CREATE"];
+const words = ["ANALYZE", "FORECAST", "OPTIMIZE"];
 
 export default function RotatingWords() {
   const [index, setIndex] = useState(0);
