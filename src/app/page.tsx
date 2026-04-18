@@ -1,6 +1,7 @@
 import SectionTitle from "@/components/SectionTitle";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+import RotatingWords from "@/components/RotatingWords";
 import { profile, projects, skills } from "@/lib/portfolio-data";
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
             <span>{profile.role}</span>
           </h1>
           <p className="hero-tagline">{profile.tagline}</p>
+          <RotatingWords />
           <div className="hero-actions">
             <a href="#projects" className="btn btn-primary">
               View Work
