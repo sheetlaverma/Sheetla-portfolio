@@ -30,9 +30,9 @@ export type Certification = {
 
 export const profile = {
   name: "Sheetla Verma",
-  role: "Data Analyst · 1 Years Experience",
+  role: "Data Analyst / Builder / Storyteller",
   tagline:
-    "Turning complex datasets into clear business decisions. Specialized in revenue analytics, customer behaviour, and ML-driven forecasting.",
+    "I blend DESIGN thinking, clean CODE, and sharp analytics to create products and dashboards that people actually use.",
   location: "India",
   email: "sheetlaverma71@gmail.com",
   github: "https://github.com/sheetlaverma",
@@ -40,9 +40,9 @@ export const profile = {
   instagram: "https://www.instagram.com/atharv_a6/",
   repository: "https://github.com/sheetlaverma/Sheetla-portfolio.git",
   about: [
-    "I am a data analyst with 1 years of experience helping B2B and B2C companies unlock value from their data. I have worked across e-commerce, fintech, and healthcare domains, building end-to-end pipelines from raw data collection to executive dashboards.",
-    "My core strength lies in asking the right business question before touching any data. I combine statistical rigour with storytelling, whether presenting to a C-suite or collaborating with an engineering team.",
-    "I have independently reduced customer churn by 22%, improved forecast accuracy by 18%, and built self-serve dashboards used daily by 200+ stakeholders.",
+    "I work at the intersection of business clarity and technical execution. From raw event logs to executive-ready insights, I build end-to-end systems that turn data into decisions.",
+    "My process is simple: frame the right question, build the cleanest pipeline possible, and ship outputs that teams can trust without second guessing.",
+    "Across telecom, retail, and healthcare projects, my work has reduced churn by 22%, improved forecast accuracy by 18%, and supported 200+ daily dashboard users.",
   ],
 };
 
@@ -113,55 +113,55 @@ export const skillCategories: SkillCategory[] = [
 
 export const projects: Project[] = [
   {
-    title: "Customer Churn Prediction - Telecom",
-    category: "High impact",
+    title: "Churn Radar / Telecom",
+    category: "Flagship Build",
     impact:
-      "Reduced monthly churn by 22%, saving approximately INR 1.2 Cr annually.",
+      "Cut monthly churn by 22% and protected roughly INR 1.2 Cr in annual revenue.",
     summary:
-      "Built an end-to-end ML pipeline to predict churn 30 days in advance using 2M+ customer records. XGBoost model achieved 91% AUC and triggered CRM interventions.",
+      "Shipped a full churn prediction engine on 2M+ customer records, surfacing risk 30 days early. The XGBoost stack hit 91% AUC and plugged directly into CRM outreach workflows.",
     stack: ["Python", "XGBoost", "SQL", "Flask", "Tableau"],
     liveUrl: "#",
     repoUrl: "https://github.com/sheetlaverma/Sheetla-portfolio",
   },
   {
-    title: "Sales Forecasting Dashboard - FMCG",
-    category: "High impact",
+    title: "Forecast OS / FMCG",
+    category: "Flagship Build",
     impact:
-      "Improved forecast accuracy from 64% to 82% and reduced overstock by INR 80L per quarter.",
+      "Moved forecast accuracy from 64% to 82% and reduced overstock by about INR 80L per quarter.",
     summary:
-      "Designed a real-time Power BI dashboard pulling from five data sources via automated ETL, with Prophet-based 13-week demand forecasting.",
+      "Built a live Power BI command center fed by automated ETL from five sources, then layered a Prophet model for rolling 13-week demand planning.",
     stack: ["Power BI", "Python (Prophet)", "BigQuery", "Airflow"],
     liveUrl: "#",
     repoUrl: "https://github.com/sheetlaverma",
   },
   {
-    title: "A/B Test Framework - E-commerce Checkout",
-    category: "High impact",
+    title: "Checkout Experiment Engine",
+    category: "Growth System",
     impact:
-      "Improved conversion rate by 11.4% and reduced cart abandonment by 17%.",
+      "Lifted conversion by 11.4% while reducing cart abandonment by 17%.",
     summary:
-      "Designed a statistically rigorous A/B framework and ran 14 sequential experiments across six months to optimize the checkout funnel.",
+      "Designed and operationalized an A/B framework, then ran 14 iterative experiments over six months to reshape the checkout funnel with statistical confidence.",
     stack: ["Python", "SQL", "Statistics", "Mixpanel", "Looker"],
     liveUrl: "#",
     repoUrl: "https://github.com/sheetlaverma",
   },
   {
-    title: "Patient Readmission Risk - Healthcare",
-    category: "Research grade",
+    title: "Readmission Risk Lens / Healthcare",
+    category: "Research Build",
     impact: "Adopted by clinical teams to flag high-risk discharge cases.",
     summary:
-      "Analysed 500K+ patient records using logistic regression and SHAP for interpretability. Published methodology as internal white paper.",
+      "Analyzed 500K+ patient records with interpretable modeling (logistic regression + SHAP), then documented the method as an internal clinical playbook.",
     stack: ["Python", "SHAP", "Scikit-learn", "PostgreSQL"],
     liveUrl: "#",
     repoUrl: "https://github.com/sheetlaverma",
   },
   {
-    title: "RFM Customer Segmentation - Retail",
-    category: "Strategy impact",
+    title: "RFM Segmentation Studio / Retail",
+    category: "Strategy Build",
     impact:
-      "Increased email open rate by 34% and repeat purchase rate by 19% within 90 days.",
+      "Increased email open rate by 34% and repeat purchases by 19% within 90 days.",
     summary:
-      "Segmented 800K customers into seven behavioural clusters using RFM scoring and K-Means clustering for campaign personalization.",
+      "Segmented 800K users into seven high-signal behavioral cohorts using RFM + K-Means, enabling personalized lifecycle campaigns that performed fast.",
     stack: ["Python", "K-Means", "SQL", "Power BI"],
     liveUrl: "#",
     repoUrl: "https://github.com/sheetlaverma",

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const words = ["ANALYZE", "FORECAST", "OPTIMIZE"];
+const words = ["DESIGN", "CODE", "CREATE"];
 
 export default function RotatingWords() {
   const [index, setIndex] = useState(0);
@@ -10,14 +10,16 @@ export default function RotatingWords() {
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % words.length);
-    }, 1800);
+    }, 2200);
 
     return () => clearInterval(timer);
   }, []);
 
   return (
     <p className="rotating-words" aria-live="polite">
-      {words[index]}
+      <span key={words[index]} className="rotating-word">
+        {words[index]}
+      </span>
     </p>
   );
 }
