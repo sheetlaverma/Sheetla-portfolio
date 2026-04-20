@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { Poppins, Playfair_Display } from "next/font/google";
+import { DM_Sans, Fraunces } from "next/font/google";
 import "./globals.css";
 
-const poppins = Poppins({
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  variable: "--font-poppins",
+  variable: "--font-dm-sans",
   weight: ["300", "400", "500", "600", "700"],
 });
 
-const playfair = Playfair_Display({
+const fraunces = Fraunces({
   subsets: ["latin"],
-  variable: "--font-playfair",
+  variable: "--font-fraunces",
   weight: ["500", "700"],
 });
 
@@ -41,7 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${playfair.variable}`}>{children}</body>
+      <body className={`${dmSans.variable} ${fraunces.variable}`}>{children}</body>
     </html>
   );
 }
