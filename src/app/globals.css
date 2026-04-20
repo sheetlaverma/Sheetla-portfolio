@@ -105,9 +105,15 @@ textarea:focus-visible {
 }
 
 main {
-  max-width: 1120px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 1.4rem 1.2rem;
+  padding: 0 clamp(1.5rem, 6vw, 6rem);
 }
 
 .hero {
@@ -308,7 +314,8 @@ main {
   padding: 0;
   list-style: none;
   display: grid;
-  gap: 0.7rem;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
 }
 
 .mini-stats li {
@@ -335,14 +342,14 @@ main {
 
 .skills-categories {
   display: grid;
-  gap: 0.9rem;
+  gap: 1.2rem;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .skill-category-card {
   border: 1px solid var(--line);
   background: var(--card);
-  padding: 1rem;
+  padding: 1.25rem;
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
@@ -374,14 +381,15 @@ main {
 
 .projects-grid {
   display: grid;
-  gap: 0.9rem;
+  gap: 1.1rem;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
 .project-card {
   border: 1px solid var(--line);
   background: var(--card);
-  padding: 1rem;
+  padding: 1.5rem;
+  border-radius: 12px;
   display: grid;
   gap: 0.65rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -500,7 +508,7 @@ main {
 
 .cert-grid {
   display: grid;
-  gap: 0.9rem;
+  gap: 1.2rem;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
 }
 
@@ -534,8 +542,8 @@ main {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
 }
 
 .contact-grid p {
@@ -611,10 +619,6 @@ main {
 }
 
 @media (max-width: 820px) {
-  main {
-    padding: 0.8rem;
-  }
-
   .top-nav {
     justify-content: flex-start;
     overflow: auto;
@@ -643,9 +647,11 @@ main {
 }
 
 .site-footer {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 1.4rem 1.2rem 2.2rem;
+  border-top: 1px solid var(--line);
+  padding: 1.4rem 0 2.2rem;
+}
+
+.footer-inner {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -654,11 +660,11 @@ main {
   font-size: 0.92rem;
 }
 
-.site-footer p {
+.footer-inner p {
   margin: 0;
 }
 
-.site-footer div {
+.footer-inner div {
   display: flex;
   gap: 0.8rem;
 }
@@ -687,6 +693,16 @@ main {
 
   .hero-title {
     gap: 0.24ch;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-inline: 1.25rem;
+  }
+
+  .footer-inner {
+    gap: 0.6rem;
   }
 }
 
