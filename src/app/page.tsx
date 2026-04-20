@@ -3,6 +3,7 @@ import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import ProjectCard from "@/components/ProjectCard";
 import RotatingWords from "@/components/RotatingWords";
+import AnimationProvider from "@/components/AnimationProvider";
 import {
   certifications,
   metrics,
@@ -13,8 +14,11 @@ import {
 } from "@/lib/portfolio-data";
 
 export default function Home() {
+  const tickerItems = skillCategories.flatMap((group) => group.items).slice(0, 18);
+
   return (
     <>
+      <AnimationProvider />
       <a className="skip-link" href="#main-content">
         Skip to main content
       </a>
@@ -28,31 +32,48 @@ export default function Home() {
       </nav>
 
       <main id="main-content">
-        <section className="hero" id="home">
-          <p className="hero-kicker">HELLO THERE</p>
-          <h1>
-            {profile.name}
-            <span>{profile.role}</span>
-          </h1>
-          <p className="hero-tagline">{profile.tagline}</p>
-          <div className="hero-stack">
-            {skills.map((skill) => (
-              <span key={skill.name}>{skill.name}</span>
-            ))}
-          </div>
-          <RotatingWords />
-          <div className="hero-actions">
-            <a href="#projects" className="btn btn-primary">
-              View Work
-            </a>
-            <a href="#contact" className="btn btn-ghost">
-              Hire Me
-            </a>
+        <section className="hero with-video" id="home">
+          <video
+            className="section-video"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-hidden="true"
+          >
+            <source src="/videos/hero-brand-loop.webm" type="video/webm" />
+          </video>
+          <div className="hero-content">
+            <p className="hero-kicker">HELLO THERE</p>
+            <h1 className="hero-title">
+              {profile.name.split(" ").map((word) => (
+                <span key={word} className="hero-word">
+                  {word}
+                </span>
+              ))}
+            </h1>
+            <p className="hero-role">{profile.role}</p>
+            <p className="hero-tagline">{profile.tagline}</p>
+            <div className="hero-stack">
+              {skills.map((skill) => (
+                <span key={skill.name}>{skill.name}</span>
+              ))}
+            </div>
+            <RotatingWords />
+            <div className="hero-actions">
+              <a href="#projects" className="btn btn-primary">
+                View Work
+              </a>
+              <a href="#contact" className="btn btn-ghost">
+                Hire Me
+              </a>
+            </div>
           </div>
         </section>
 
-        <section id="about" className="panel">
-          <SectionTitle label="01 / ABOUT" title="Data Analyst Focused On Business Outcomes" />
+        <section id="about" className="panel js-reveal">
+          <SectionTitle label="01 / ABOUT" title="I Build Clarity From Chaos" />
           <div className="about-grid">
             <div>
               {profile.about.map((para) => (
@@ -70,8 +91,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="skills" className="panel tint">
-          <SectionTitle label="02 / SKILLS" title="Tools, Analytics, And Communication" />
+        <section id="skills" className="panel tint js-reveal">
+          <SectionTitle label="02 / SKILLS" title="My Creative + Technical Stack" />
           <div className="skills-categories">
             {skillCategories.map((group) => (
               <article key={group.category} className="skill-category-card">
@@ -84,10 +105,28 @@ export default function Home() {
               </article>
             ))}
           </div>
+          <div className="skills-marquee" aria-hidden="true">
+            <div className="skills-marquee-track">
+              {[...tickerItems, ...tickerItems].map((item, index) => (
+                <span key={`${item}-${index}`}>{item}</span>
+              ))}
+            </div>
+          </div>
         </section>
 
-        <section id="projects" className="panel">
-          <SectionTitle label="03 / PROJECTS" title="Featured Projects" />
+        <section id="projects" className="panel with-video js-reveal">
+          <video
+            className="section-video"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-hidden="true"
+          >
+            <source src="/videos/projects-brand-loop.webm" type="video/webm" />
+          </video>
+          <SectionTitle label="03 / PROJECTS" title="Selected Builds And Case Studies" />
           <div className="projects-grid">
             {projects.map((project, index) => (
               <ProjectCard key={project.title} project={project} index={index} />
@@ -95,8 +134,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="certifications" className="panel tint">
-          <SectionTitle label="04 / CERTIFICATIONS" title="Learning And Credentials" />
+        <section id="certifications" className="panel tint js-reveal">
+          <SectionTitle label="04 / CERTIFICATIONS" title="Learning, Certifications, Momentum" />
           <div className="cert-grid">
             {certifications.map((certification) => (
               <article key={certification.title} className="cert-card">
@@ -108,12 +147,12 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className="panel tint">
-          <SectionTitle label="05 / CONTACT" title="Let's Build Something Together" />
+        <section id="contact" className="panel tint js-reveal">
+          <SectionTitle label="05 / CONTACT" title="Let's Design, Code, And Ship" />
           <div className="contact-grid">
             <div>
               <p>
-                Open to analyst roles, freelance analytics consulting, and cross-functional collaboration.
+                Open to full-time analyst roles, freelance builds, and cross-functional collaborations where data needs to drive clear action.
               </p>
               <div className="contact-links">
                 <a href={profile.github} target="_blank" rel="noreferrer">
